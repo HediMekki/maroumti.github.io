@@ -40,4 +40,46 @@ body {
   img.center {
     display: block;
     margin: 0 auto;
+  }
+  .love-button {
+    width: 100px;
+    height: 100px;
+    background-color: #ff5c8d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .love-button::before,
+  .love-button::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: #ff5c8d;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    transition: transform 0.3s ease;
+  }
+  
+  .love-button::before {
+    left: -50px;
+  }
+  
+  .love-button::after {
+    right: -50px;
+  }
+  
+  .love-button:hover {
+    background-color: #ff2d6b;
+  }
+  
+  .love-button:hover::before,
+  .love-button:hover::after {
+    transform: scale(1.2);
 }
